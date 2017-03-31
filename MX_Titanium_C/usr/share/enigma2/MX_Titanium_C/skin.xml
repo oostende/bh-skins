@@ -10,6 +10,10 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <resolution xres="1920" yres="1080" bpp="32"/>
 </output>
 <colors>
+<color name="ostende" value="#A9A9F5"/>
+<color name="ostende2" value="#F78181"/>
+<color name="ostende3" value="#FA58F4"/>
+<color name="ostende4" value="#00FFFF"/>
 <color name="white" value="#ffffff"/>
 <color name="grey" value="#afafaf"/>
 <color name="darkgrey" value="#4a4a4a"/>
@@ -155,7 +159,7 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <widget source="session.FrontendStatus" render="Progress" pixmap="MX_Titanium_C/snr2.png" position="906,39" size="255,19" zPosition="2" transparent="1">
 <convert type="FrontendInfo">SNR</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="325,42" size="500,50" font="Regular;42" foregroundColor="#008dbc" backgroundColor="#102a2a2b" transparent="1">
+<widget source="session.CurrentService" render="Label" position="325,42" size="500,50" font="Regular;42" foregroundColor="ostende4" backgroundColor="#102a2a2b" transparent="1">
 <convert type="ServiceName">Name</convert>
 </widget>
 <widget source="global.CurrentTime" render="Label" position="1635,40" size="150,55" font="Regular;44" valign="top" halign="right" foregroundColor="#008dbc" backgroundColor="#102a2a2b" transparent="1">
@@ -184,20 +188,13 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <convert type="ServiceInfo">IsCrypted</convert>
 <convert type="ConditionalShowHide"/>
 </widget>
-<widget source="session.CurrentService" render="Pixmap" position="1527,44" size="52,38" zPosition="1" pixmap="MX_Titanium_C/ico_sd_on.png" alphatest="blend">
-<convert type="ServiceInfo">IsSD</convert>
-<convert type="ConditionalShowHide"/>
-</widget>
+<ePixmap position="1527,44" size="52,38" zPosition="1" pixmap="MX_Titanium_C/ico_hd_off.png" alphatest="blend"/>
 <widget source="session.CurrentService" render="Pixmap" position="1527,44" size="52,38" zPosition="2" pixmap="MX_Titanium_C/ico_hd_on.png" alphatest="blend">
 <convert type="ServiceInfo">IsHD</convert>
 <convert type="ConditionalShowHide"/>
 </widget>
 <widget source="session.CurrentService" render="Pixmap" position="1527,44" size="52,38" zPosition="3" pixmap="MX_Titanium_C/ico_uhd_on.png" alphatest="blend">
 <convert type="ServiceInfo">Is4K</convert>
-<convert type="ConditionalShowHide"/>
-</widget>
-<widget source="session.CurrentService" render="Pixmap" position="1527,44" size="52,38" zPosition="4" pixmap="MX_Titanium_C/ico_ip_on.png" alphatest="blend">
-<convert type="ServiceInfo">IsStream</convert>
 <convert type="ConditionalShowHide"/>
 </widget>
 <ePixmap pixmap="MX_Titanium_C/icon_hbbtv_off.png" position="1590,44" zPosition="1" size="52,38" alphatest="blend"/>
@@ -208,19 +205,19 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <widget source="session.CurrentService" render="Picon" position="69,89" size="220,132" zPosition="10" transparent="1" alphatest="blend">
 <convert type="ServiceName">Reference</convert>
 </widget>
-<widget source="session.Event_Now" render="Label" position="315,108" size="120,45" halign="right" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1">
+<widget source="session.Event_Now" render="Label" position="315,108" size="120,45" halign="right" font="Regular;34" foregroundColor="yellow" backgroundColor="#10262626" transparent="1">
 <convert type="EventTime">StartTime</convert>
 <convert type="ClockToText">Default</convert>
 </widget>
 <eLabel text="-" position="435,108" size="30,45" halign="center" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1"/>
-<widget source="session.Event_Now" render="Label" position="465,108" size="120,45" halign="left" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1">
+<widget source="session.Event_Now" render="Label" position="465,108" size="120,45" halign="left" font="Regular;34" foregroundColor="yellow" backgroundColor="#10262626" transparent="1">
 <convert type="EventTime">EndTime</convert>
 <convert type="ClockToText">Default</convert>
 </widget>
 <widget source="session.Event_Now" render="Label" position="585,108" size="865,45" halign="left" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1" noWrap="1">
 <convert type="EventName">Name</convert>
 </widget>
-<widget source="session.Event_Now" render="Label" position="1455,108" size="187,45" halign="right" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1">
+<widget source="session.Event_Now" render="Label" position="1455,108" size="187,45" halign="right" font="Regular;34" foregroundColor="ostende2" backgroundColor="#10262626" transparent="1">
 <convert type="EventTime">Remaining</convert>
 <convert type="RemainingToText">InMinutes</convert>
 </widget>
@@ -228,38 +225,32 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <widget source="session.Event_Now" render="Progress" pixmap="MX_Titanium_C/sliderosd2.png" position="345,153" size="1308,7" zPosition="2" transparent="1">
 <convert type="EventTime">Progress</convert>
 </widget>
-<widget source="session.Event_Next" render="Label" position="315,166" size="120,45" halign="right" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1">
+<widget source="session.Event_Next" render="Label" position="315,166" size="120,45" halign="right" font="Regular;34" foregroundColor="yellow" backgroundColor="#101a1a1a" transparent="1">
 <convert type="EventTime">StartTime</convert>
 <convert type="ClockToText">Default</convert>
 </widget>
 <eLabel text="-" position="435,166" size="30,45" halign="center" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1"/>
-<widget source="session.Event_Next" render="Label" position="465,166" size="120,45" halign="left" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1">
+<widget source="session.Event_Next" render="Label" position="465,166" size="120,45" halign="left" font="Regular;34" foregroundColor="yellow" backgroundColor="#101a1a1a" transparent="1">
 <convert type="EventTime">EndTime</convert>
 <convert type="ClockToText">Default</convert>
 </widget>
-<widget source="session.Event_Next" render="Label" position="585,166" size="865,45" halign="left" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1" noWrap="1">
+<widget source="session.Event_Next" render="Label" position="585,166" size="865,45" halign="left" font="Regular;34" foregroundColor="green" backgroundColor="#101a1a1a" transparent="1" noWrap="1">
 <convert type="EventName">Name</convert>
 </widget>
-<widget source="session.Event_Next" render="Label" position="1455,166" size="187,45" halign="right" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1">
+<widget source="session.Event_Next" render="Label" position="1455,166" size="187,45" halign="right" font="Regular;34" foregroundColor="ostende2" backgroundColor="#101a1a1a" transparent="1">
 <convert type="EventTime">Duration</convert>
 <convert type="ClockToText">InMinutes</convert>
 </widget>
-<ePixmap pixmap="MX_Titanium_C/recbg.png" position="300,120" size="30,30" zPosition="1" alphatest="blend"/>
-<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="MX_Titanium_C/upd.png" position="300,120" size="30,30" zPosition="2" alphatest="blend"> 
+<ePixmap pixmap="MX_Titanium_C/recbg.png" position="300,140" size="30,30" zPosition="1" alphatest="blend"/>
+<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="MX_Titanium_C/upd.png" position="300,140" size="30,30" zPosition="2" alphatest="blend"> 
 <convert type="ConditionalShowHide" />
 </widget>
-<ePixmap pixmap="MX_Titanium_C/recbg.png" position="300,160" size="30,30" zPosition="1" alphatest="blend"/>
-<widget source="session.CurrentService" render="Pixmap" pixmap="MX_Titanium_C/sub_1.png" position="300,160" size="30,30" zPosition="2" alphatest="blend"> 
+<widget source="session.CurrentService" render="Pixmap" pixmap="MX_Titanium_C/sub_1.png" position="300,140" size="30,30" zPosition="3" alphatest="blend"> 
 <convert type="ServiceInfo">SubservicesAvailable</convert>
 <convert type="ConditionalShowHide"/>
 </widget>
-<ePixmap pixmap="MX_Titanium_C/recbg.png" position="1665,120" size="30,30" zPosition="1" alphatest="blend"/>
-<widget source="session.RecordState" render="Pixmap" pixmap="MX_Titanium_C/rec_1.png" position="1665,120" size="30,30" zPosition="2" alphatest="blend"> 
-<convert type="ConditionalShowHide">Blink</convert>
-</widget>
-<ePixmap pixmap="MX_Titanium_C/recbg.png" position="1665,160" size="30,30" zPosition="1" alphatest="blend"/>
-<widget source="session.RecordState" render="Pixmap" pixmap="MX_Titanium_C/stream.png" position="1665,160" size="30,30" zPosition="2" alphatest="blend"> 
-<convert type="ClientsStreaming"/>
+<ePixmap pixmap="MX_Titanium_C/recbg.png" position="1665,140" size="30,30" zPosition="1" alphatest="blend"/>
+<widget source="session.RecordState" render="Pixmap" pixmap="MX_Titanium_C/rec_1.png" position="1665,140" size="30,30" zPosition="2" alphatest="blend"> 
 <convert type="ConditionalShowHide">Blink</convert>
 </widget>
 <widget source="global.CurrentTime" render="Bhclock" position="1760,125" zPosition="2" size="48,48" transparent="1">
@@ -495,7 +486,7 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <widget source="session.FrontendStatus" render="Progress" pixmap="MX_Titanium_C/snr2.png" position="906,39" size="255,19" zPosition="2" transparent="1">
 <convert type="FrontendInfo">SNR</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="325,42" size="500,50" font="Regular;42" foregroundColor="#008dbc" backgroundColor="#102a2a2b" transparent="1">
+<widget source="session.CurrentService" render="Label" position="325,42" size="500,50" font="Regular;42" foregroundColor="ostende4" backgroundColor="#102a2a2b" transparent="1">
 <convert type="ServiceName">Name</convert>
 </widget>
 <widget source="global.CurrentTime" render="Label" position="1635,40" size="150,55" font="Regular;44" valign="top" halign="right" foregroundColor="#008dbc" backgroundColor="#102a2a2b" transparent="1">
@@ -524,20 +515,13 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <convert type="ServiceInfo">IsCrypted</convert>
 <convert type="ConditionalShowHide"/>
 </widget>
-<widget source="session.CurrentService" render="Pixmap" position="1527,44" size="52,38" zPosition="1" pixmap="MX_Titanium_C/ico_sd_on.png" alphatest="blend">
-<convert type="ServiceInfo">IsSD</convert>
-<convert type="ConditionalShowHide"/>
-</widget>
+<ePixmap position="1527,44" size="52,38" zPosition="1" pixmap="MX_Titanium_C/ico_hd_off.png" alphatest="blend"/>
 <widget source="session.CurrentService" render="Pixmap" position="1527,44" size="52,38" zPosition="2" pixmap="MX_Titanium_C/ico_hd_on.png" alphatest="blend">
 <convert type="ServiceInfo">IsHD</convert>
 <convert type="ConditionalShowHide"/>
 </widget>
 <widget source="session.CurrentService" render="Pixmap" position="1527,44" size="52,38" zPosition="3" pixmap="MX_Titanium_C/ico_uhd_on.png" alphatest="blend">
 <convert type="ServiceInfo">Is4K</convert>
-<convert type="ConditionalShowHide"/>
-</widget>
-<widget source="session.CurrentService" render="Pixmap" position="1527,44" size="52,38" zPosition="4" pixmap="MX_Titanium_C/ico_ip_on.png" alphatest="blend">
-<convert type="ServiceInfo">IsStream</convert>
 <convert type="ConditionalShowHide"/>
 </widget>
 <ePixmap pixmap="MX_Titanium_C/icon_hbbtv_off.png" position="1590,44" zPosition="1" size="52,38" alphatest="blend"/>
@@ -548,19 +532,19 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <widget source="session.CurrentService" render="Picon" position="69,89" size="220,132" zPosition="10" transparent="1" alphatest="blend">
 <convert type="ServiceName">Reference</convert>
 </widget>
-<widget source="session.Event_Now" render="Label" position="315,108" size="120,45" halign="right" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1">
+<widget source="session.Event_Now" render="Label" position="315,108" size="120,45" halign="right" font="Regular;34" foregroundColor="yellow" backgroundColor="#10262626" transparent="1">
 <convert type="EventTime">StartTime</convert>
 <convert type="ClockToText">Default</convert>
 </widget>
 <eLabel text="-" position="435,108" size="30,45" halign="center" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1"/>
-<widget source="session.Event_Now" render="Label" position="465,108" size="120,45" halign="left" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1">
+<widget source="session.Event_Now" render="Label" position="465,108" size="120,45" halign="left" font="Regular;34" foregroundColor="yellow" backgroundColor="#10262626" transparent="1">
 <convert type="EventTime">EndTime</convert>
 <convert type="ClockToText">Default</convert>
 </widget>
 <widget source="session.Event_Now" render="Label" position="585,108" size="865,45" halign="left" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1" noWrap="1">
 <convert type="EventName">Name</convert>
 </widget>
-<widget source="session.Event_Now" render="Label" position="1455,108" size="187,45" halign="right" font="Regular;34" foregroundColor="button" backgroundColor="#10262626" transparent="1">
+<widget source="session.Event_Now" render="Label" position="1455,108" size="187,45" halign="right" font="Regular;34" foregroundColor="ostende2" backgroundColor="#10262626" transparent="1">
 <convert type="EventTime">Remaining</convert>
 <convert type="RemainingToText">InMinutes</convert>
 </widget>
@@ -568,38 +552,32 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <widget source="session.Event_Now" render="Progress" pixmap="MX_Titanium_C/sliderosd2.png" position="345,153" size="1308,7" zPosition="2" transparent="1">
 <convert type="EventTime">Progress</convert>
 </widget>
-<widget source="session.Event_Next" render="Label" position="315,166" size="120,45" halign="right" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1">
+<widget source="session.Event_Next" render="Label" position="315,166" size="120,45" halign="right" font="Regular;34" foregroundColor="yellow" backgroundColor="#101a1a1a" transparent="1">
 <convert type="EventTime">StartTime</convert>
 <convert type="ClockToText">Default</convert>
 </widget>
 <eLabel text="-" position="435,166" size="30,45" halign="center" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1"/>
-<widget source="session.Event_Next" render="Label" position="465,166" size="120,45" halign="left" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1">
+<widget source="session.Event_Next" render="Label" position="465,166" size="120,45" halign="left" font="Regular;34" foregroundColor="yellow" backgroundColor="#101a1a1a" transparent="1">
 <convert type="EventTime">EndTime</convert>
 <convert type="ClockToText">Default</convert>
 </widget>
-<widget source="session.Event_Next" render="Label" position="585,166" size="865,45" halign="left" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1" noWrap="1">
+<widget source="session.Event_Next" render="Label" position="585,166" size="865,45" halign="left" font="Regular;34" foregroundColor="green" backgroundColor="#101a1a1a" transparent="1" noWrap="1">
 <convert type="EventName">Name</convert>
 </widget>
-<widget source="session.Event_Next" render="Label" position="1455,166" size="187,45" halign="right" font="Regular;34" foregroundColor="grey" backgroundColor="#101a1a1a" transparent="1">
+<widget source="session.Event_Next" render="Label" position="1455,166" size="187,45" halign="right" font="Regular;34" foregroundColor="ostende2" backgroundColor="#101a1a1a" transparent="1">
 <convert type="EventTime">Duration</convert>
 <convert type="ClockToText">InMinutes</convert>
 </widget>
-<ePixmap pixmap="MX_Titanium_C/recbg.png" position="300,120" size="30,30" zPosition="1" alphatest="blend"/>
-<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="MX_Titanium_C/upd.png" position="300,120" size="30,30" zPosition="2" alphatest="blend"> 
+<ePixmap pixmap="MX_Titanium_C/recbg.png" position="300,140" size="30,30" zPosition="1" alphatest="blend"/>
+<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="MX_Titanium_C/upd.png" position="300,140" size="30,30" zPosition="2" alphatest="blend"> 
 <convert type="ConditionalShowHide" />
 </widget>
-<ePixmap pixmap="MX_Titanium_C/recbg.png" position="300,160" size="30,30" zPosition="1" alphatest="blend"/>
-<widget source="session.CurrentService" render="Pixmap" pixmap="MX_Titanium_C/sub_1.png" position="300,160" size="30,30" zPosition="2" alphatest="blend"> 
+<widget source="session.CurrentService" render="Pixmap" pixmap="MX_Titanium_C/sub_1.png" position="300,140" size="30,30" zPosition="3" alphatest="blend"> 
 <convert type="ServiceInfo">SubservicesAvailable</convert>
 <convert type="ConditionalShowHide"/>
 </widget>
-<ePixmap pixmap="MX_Titanium_C/recbg.png" position="1665,120" size="30,30" zPosition="1" alphatest="blend"/>
-<widget source="session.RecordState" render="Pixmap" pixmap="MX_Titanium_C/rec_1.png" position="1665,120" size="30,30" zPosition="2" alphatest="blend"> 
-<convert type="ConditionalShowHide">Blink</convert>
-</widget>
-<ePixmap pixmap="MX_Titanium_C/recbg.png" position="1665,160" size="30,30" zPosition="1" alphatest="blend"/>
-<widget source="session.RecordState" render="Pixmap" pixmap="MX_Titanium_C/stream.png" position="1665,160" size="30,30" zPosition="2" alphatest="blend"> 
-<convert type="ClientsStreaming"/>
+<ePixmap pixmap="MX_Titanium_C/recbg.png" position="1665,140" size="30,30" zPosition="1" alphatest="blend"/>
+<widget source="session.RecordState" render="Pixmap" pixmap="MX_Titanium_C/rec_1.png" position="1665,140" size="30,30" zPosition="2" alphatest="blend"> 
 <convert type="ConditionalShowHide">Blink</convert>
 </widget>
 <widget source="global.CurrentTime" render="Bhclock" position="1760,125" zPosition="2" size="48,48" transparent="1">
@@ -823,22 +801,22 @@ DO NOT REMOVE OR CHANGE THIS HEADER AND SKIN NAME !!!		-->
 <widget source="global.CurrentTime" render="Label" position="1635,230" size="210,40" font="Regular;32" halign="center" foregroundColor="#008dbc" backgroundColor="#383838" transparent="1">
 <convert type="ClockToText">Format:%d.%m.%Y</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="990,244" size="600,30" halign="right" font="Regular;22" zPosition="4" transparent="1" foregroundColor="#cccccc" backgroundColor="#1d1d1d">
+<widget source="session.CurrentService" render="Label" position="990,244" size="600,30" halign="right" font="Regular;22" zPosition="4" transparent="1" foregroundColor="ostende" backgroundColor="#1d1d1d">
 <convert type="PliExtraInfo">TransponderInfo</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="1190,220" size="200,30" halign="left" font="Regular;22" zPosition="4" transparent="1" foregroundColor="#cccccc" backgroundColor="#383838">
+<widget source="session.CurrentService" render="Label" position="1190,220" size="200,30" halign="left" font="Regular;22" zPosition="4" transparent="1" foregroundColor="green" backgroundColor="#383838">
 <convert type="PliExtraInfo">ResolutionString</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="1380,220" size="200,30" halign="left" font="Regular;22" zPosition="4" transparent="1" foregroundColor="#cccccc" backgroundColor="#383838">
+<widget source="session.CurrentService" render="Label" position="1380,220" size="200,30" halign="left" font="Regular;22" zPosition="4" transparent="1" foregroundColor="ostende3" backgroundColor="#383838">
 <convert type="PliExtraInfo">VideoCodec</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="80,220" size="425,30" halign="center" font="Regular;22" zPosition="4" transparent="1" foregroundColor="#cccccc" backgroundColor="#383838">
+<widget source="session.CurrentService" render="Label" position="80,220" size="425,30" halign="center" font="Regular;22" zPosition="4" transparent="1" foregroundColor="ostende4" backgroundColor="#383838">
 <convert type="PliExtraInfo">CryptoSpecial</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="400,220" size="690,90" halign="center" font="Regular;22" zPosition="4" transparent="1" foregroundColor="#cccccc" backgroundColor="#383838">
+<widget source="session.CurrentService" render="Label" position="400,220" size="690,90" halign="center" font="Regular;22" zPosition="4" transparent="1" foregroundColor="yellow" backgroundColor="#383838">
 <convert type="CryptoInfo">VerboseInfo</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="80,244" size="425,30" halign="center" font="Regular;22" zPosition="4" transparent="1" foregroundColor="#cccccc" backgroundColor="#1d1d1d">
+<widget source="session.CurrentService" render="Label" position="80,244" size="425,30" halign="center" font="Regular;22" zPosition="4" transparent="1" foregroundColor="ostende4" backgroundColor="#1d1d1d">
 <convert type="PliExtraInfo">CryptoBar</convert>
 </widget>
 </screen> 
@@ -880,15 +858,15 @@ MultiContentEntryPixmapAlphaTest(pos = (10, 17), size = (100, 40), png = 2),
 <ePixmap pixmap="MX_Titanium_C/menu/arrow_bp.png" position="20,28" size="60,60" alphatest="blend"/>
 <ePixmap pixmap="MX_Titanium_C/menu/ok_bp.png" position="745,28" size="60,60" alphatest="blend"/>
 <widget name="list" position="95,40" size="635,35" font="Regular;28" itemHeight="35" zPosition="2" scrollbarMode="showOnDemand" transparent="1"/>
-<widget name="lab1" position="510,120" size="290,35" font="Regular;28" zPosition="2" halign="right" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/>
+<widget name="lab1" position="510,120" size="290,35" font="Regular;28" zPosition="2" halign="right" foregroundColor="ostende3" backgroundColor="bgbutton" transparent="1"/>
 <widget name="lab2" position="95,80" size="650,35" font="Regular;30" halign="center" zPosition="2" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/>
-<widget name="lab3" position="30,120" size="185,35" font="Regular;28" halign="left" zPosition="2" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/>
-<widget name="activecam" position="210,120" size="450,35" font="Regular;28" halign="left" zPosition="2" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/> 
-<widget name="Ilab1" position="30,160" size="640,35" font="Regular;28" zPosition="2" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/>
-<widget name="Ilab2" position="30,198" size="640,35" font="Regular;28" zPosition="2" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/>
-<widget name="Ilab3" position="30,236" size="640,35" font="Regular;28" zPosition="2" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/>
-<widget name="Ilab4" position="30,274" size="640,35" font="Regular;28" zPosition="2" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/>
-<widget name="Ecmtext" position="30,320" size="790,370" font="Regular;24" halign="left" zPosition="2" foregroundColor="button" backgroundColor="bgbutton" transparent="1"/>
+<widget name="lab3" position="30,120" size="185,35" font="Regular;28" halign="left" zPosition="2" foregroundColor="red" backgroundColor="bgbutton" transparent="1"/>
+<widget name="activecam" position="210,120" size="450,35" font="Regular;28" halign="left" zPosition="2" foregroundColor="ostende2" backgroundColor="bgbutton" transparent="1"/> 
+<widget name="Ilab1" position="30,160" size="640,35" font="Regular;28" zPosition="2" foregroundColor="blue" backgroundColor="bgbutton" transparent="1"/>
+<widget name="Ilab2" position="30,198" size="640,35" font="Regular;28" zPosition="2" foregroundColor="ostende3" backgroundColor="bgbutton" transparent="1"/>
+<widget name="Ilab3" position="30,236" size="640,35" font="Regular;28" zPosition="2" foregroundColor="ostende4" backgroundColor="bgbutton" transparent="1"/>
+<widget name="Ilab4" position="30,274" size="640,35" font="Regular;28" zPosition="2" foregroundColor="yellow" backgroundColor="bgbutton" transparent="1"/>
+<widget name="Ecmtext" position="30,320" size="790,370" font="Regular;24" halign="left" zPosition="2" foregroundColor="ostende4" backgroundColor="bgbutton" transparent="1"/>
 </screen>
 <screen name="DeliteAddons" position="30,120" size="820,850" title="Addons Manager">
 <widget source="list" render="Listbox" enableWrapAround="1" position="0,20" size="820,600" zPosition="1" scrollbarMode="showNever" transparent="1">
@@ -1491,7 +1469,7 @@ MultiContentEntryText(pos = (670, 3), size = (150, 37),  font = 1, flags = RT_HA
 <widget source="session.VideoPicture" render="Pig" position="1228,30" zPosition="3" size="530,300" backgroundColor="#ff000000"/>
 <ePixmap pixmap="MX_Titanium_C/menu/menubutton.png" position="1730,815" size="48,48" alphatest="blend"/>
 <ePixmap pixmap="MX_Titanium_C/menu/epg.png" position="1660,815" size="48,48" alphatest="blend"/>
-<widget name="list" position="10,67" size="1180,810" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="white" progressBarWidth="80" fieldMargins="13" foregroundColorServiceNotAvail="#999999" colorEventProgressbarSelected="white" colorServiceDescription="#afafaf" colorServiceDescriptionSelected="white" serviceItemHeight="45" serviceNumberFont="Regular;26" serviceNameFont="Regular;32" serviceInfoFont="Regular;32" transparent="1"/>
+<widget name="list" position="10,67" size="1180,810" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="white" progressBarWidth="80" fieldMargins="13" foregroundColorServiceNotAvail="#999999" colorEventProgressbarSelected="white" colorServiceDescription="green" colorServiceDescriptionSelected="ostende2" serviceItemHeight="45" serviceNumberFont="Regular;26" serviceNameFont="Regular;32" serviceInfoFont="Regular;32" transparent="1"/>
 <ePixmap pixmap="MX_Titanium_C/buttons/red48x48.png" position="40,10" size="48,48" alphatest="blend"/>
 <ePixmap pixmap="MX_Titanium_C/buttons/green48x48.png" position="340,10" size="48,48" alphatest="blend"/>
 <ePixmap pixmap="MX_Titanium_C/buttons/yellow48x48.png" position="640,10" size="48,48" alphatest="blend"/>
@@ -1500,21 +1478,21 @@ MultiContentEntryText(pos = (670, 3), size = (150, 37),  font = 1, flags = RT_HA
 <widget name="key_green" position="405,10" size="285,48" zPosition="1" font="Regular;32" halign="left" valign="center" foregroundColor="button" backgroundColor="bgmain" transparent="1"/>
 <widget name="key_yellow" position="705,10" size="285,48" zPosition="1" font="Regular;32" halign="left" valign="center" foregroundColor="button" backgroundColor="bgmain" transparent="1"/>
 <widget name="key_blue" position="1005,10" size="285,48" zPosition="1" font="Regular;32" halign="left" valign="center" foregroundColor="button" backgroundColor="bgmain" transparent="1"/>
-<widget source="ServiceEvent" render="Label" position="1200,340" zPosition="1" size="105,35" font="Regular;28" foregroundColor="button" backgroundColor="bgbutton" halign="right" transparent="1">
+<widget source="ServiceEvent" render="Label" position="1200,340" zPosition="1" size="105,35" font="Regular;28" foregroundColor="yellow" backgroundColor="bgbutton" halign="right" transparent="1">
 <convert type="EventTime">StartTime</convert>
 <convert type="ClockToText"></convert>
 </widget>
-<widget source="ServiceEvent" render="Label" position="1677,340" zPosition="1" size="105,35" font="Regular;28" halign="left" foregroundColor="button" backgroundColor="bgbutton" transparent="1">
+<widget source="ServiceEvent" render="Label" position="1677,340" zPosition="1" size="105,35" font="Regular;28" halign="left" foregroundColor="yellow" backgroundColor="bgbutton" transparent="1">
 <convert type="EventTime">EndTime</convert>
 <convert type="ClockToText">Format:%H:%M</convert>
 </widget>
 <widget source="ServiceEvent" render="Progress" position="1315,345" zPosition="1" pixmap="MX_Titanium_C/progress.png" size="350,22" borderWidth="1" borderColor="#cccccc">
 <convert type="EventTime">Progress</convert>
 </widget>
-<widget source="ServiceEvent" render="Label" position="1218,385" zPosition="1" size="580,352" font="Regular;28" foregroundColor="button" backgroundColor="bgbutton" transparent="1">
+<widget source="ServiceEvent" render="Label" position="1218,385" zPosition="1" size="580,352" font="Regular;28" foregroundColor="ostende4" backgroundColor="bgbutton" transparent="1">
 <convert type="EventName">FullDescription</convert>
 </widget>
-<widget source="ServiceEvent" render="NextEpgInfo" position="1218,745" zPosition="1" size="580,70" font="Regular;30" foregroundColor="grey" backgroundColor="bgbutton" transparent="1"/>
+<widget source="ServiceEvent" render="NextEpgInfo" position="1218,745" zPosition="1" size="580,70" font="Regular;30" foregroundColor="ostende2" backgroundColor="bgbutton" transparent="1"/>
 <widget source="ServiceEvent" render="Label" position="1218,825" size="200,40" font="Regular;32" halign="left" foregroundColor="grey" backgroundColor="bgbutton" transparent="1">
 <convert type="ServiceOrbitalPosition"/>
 </widget>
